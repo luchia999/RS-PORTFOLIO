@@ -1,0 +1,26 @@
+@use '../variables' as *;
+@use '../functions' as *;
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(15) rem(30);
+    border: none;
+    border-radius: rem(6);
+
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+.button--outline { 
+    border: 1px colid rgba(255, 255, 255, 0.05); 
+    background-color: transparent;
+
+    &:hover,
+    &:active {
+        background-color: rgba(255, 255, 255, 0.30);
+    }
+}
