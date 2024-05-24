@@ -1,0 +1,17 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+@use '../functions' as *;
+
+.header {
+    background-color: $bg-dark;
+    color: $color-text-light;
+    padding: rem(15) 0;
+    position: relative;
+}
+
+.header__contaiber {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $gutter;
+}
