@@ -1,0 +1,72 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+@use '../functions' as *;
+
+$about-item-icon-size:toRem(112);
+
+.about-item {
+    padding: relative;
+    margin: 0;
+    min-height: calc(toRem(112) + toRem(32) * 2 - toRem(13));
+    color: var(--section-title-color);
+    padding: toRem(32) toRem(48) toRem(32) toRem(200);
+
+    @include sm {
+        padding-left: toRem(170);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: toRem(48);
+        top: calc(toRem(32) - toRem(13));
+        width: $about-item-icon-size;
+        height: $about-item-icon-size;
+        background-color: $color-primary;
+        border-radius: 50%;
+        z-index: 1;
+
+        @include sm {
+          left: toRem(30);
+        }    
+    }
+
+    &::after {
+        content: '';
+        width: calc($about-item-icon-size / 2.33);
+        height: calc($about-item-icon-size / 2.33);
+        padding: absolute;
+        top: calc($about-item-icon-size / 2 + toRem(32) - toRem(13));
+        left: calc($about-item-icon-size / 2 + toRem(48));
+        transform: translate(-50%, -50%);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 2;
+
+        @include sm {
+            left:calc($about-item-icon-size / 2 + toRem(30));
+          } 
+    }
+
+    &--icon__experience::after {
+        background-image: url('../../assets/images/ sprite.svg#icon-calendar-check');
+    }
+
+    &--icon__projects::after {
+        background-image: url('../../assets/images/ sprite.svg#icon-calendar-ease');
+    }
+}
+
+.about-item__title {
+    display: block;
+    font-size: toRem(40);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 toRem(12);
+}
+
+.about-item__desc {
+    font-size: toRem(20);
+    line-height: 1.2;
+}

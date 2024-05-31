@@ -5,13 +5,31 @@
 .header {
     background-color: $bg-dark;
     color: $color-text-light;
-    padding: rem(15) 0;
+    padding: toRem(15) 0;
     position: relative;
 }
 
-.header__contaiber {
+.header__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: $gutter;
+}
+
+.header__menu {
+    flex-grow: 1;
+    padding: 0 toRem(32);
+    max-width: toRem(448);
+
+    @include sm {
+        flex-grow: 0;
+        padding: 0;
+        max-width: revert;
+    }
+}
+
+.header__button {
+    @include sm {
+        display: none;
+    }
 }

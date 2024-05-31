@@ -2,7 +2,7 @@
 @use './mixins' as *;
 @use './functions' as *;
 
-@include font-face('Epilogue', '../assets/fonts/Epilogue.ttf');
+@include font-face('Epilogue', '../assets/fonts/Epilogue');
 
 * {
    box-sizing: border-box;

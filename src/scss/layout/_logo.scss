@@ -5,12 +5,12 @@
     align-items: center;
     text-decoration: none;
     color: inherit;
-    gap: rem(17);
+    gap: toRem(17);
 }
 
 .logo__title {
     margin: 0;
-    font-size: rem(24);
+    font-size: toRem(24);
     font-style: normal;
     font-weight: 700;
     line-height: 1.33;

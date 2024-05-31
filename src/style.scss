@@ -3,5 +3,7 @@
 @forward 'scss/mixins';
 @forward 'scss/base';
 
-@forward 'scss/layout/index';
 @forward 'scss/common';
+@forward 'scss/layout';
+@forward 'scss/components';
+
